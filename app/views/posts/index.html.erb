@@ -1,0 +1,17 @@
+<h1>Posts on Epicdus news!!</h1>
+
+<p><%= link_to "Epicodus new post", new_post_path %></p>
+
+<p>Click on checkbxes to vote for your favorite links, or click on link to view description. The link with the highest votes will be on top.</p>
+
+<ol>
+  <% @posts.each do |post| %>
+    <li><%= check_box_tag("vote_ids[]", post.id) %>
+    <%= link_to  "#{post.link}", post_path(post) %>
+
+  </li>
+  <% end %>
+</ol>
+<%= form_for :votes %>
+  <% check_box_tag :voted_for %>
+<% end %>

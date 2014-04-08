@@ -1,0 +1,15 @@
+<%= render("layouts/errors", :object => @post) %>
+
+<%= form_for(@post) do |f| %>
+  <div>
+    <%= f.label :link %>
+    <%= f.text_field :link %>
+    <p></p>
+    <p>
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+    </p>
+  </div>
+
+  <%= f.submit %>
+<% end %>

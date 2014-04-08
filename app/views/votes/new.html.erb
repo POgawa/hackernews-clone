@@ -1,0 +1,7 @@
+
+<%= render("layouts/errors", :object => @vote) %>
+
+<%= form_for :votes %>
+  <% check_box_tag :voted_for %>
+<% end %>
+
